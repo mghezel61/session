@@ -1,3 +1,4 @@
+import "../css/seasonDisplay.css";
 import React from "react";
 import Config from "./Config";
 
@@ -19,22 +20,14 @@ const getSession = (latitude, month) => {
   }
 };
 
-
-
 function SessionDisplay(props) {
   const season = getSession(props.lat, new Date().getMonth());
-  const { icon, text  } = Config[season];
+  const { icon, text } = Config[season]; // Object distructuring
   return (
-    <div className="ui container" style={{ marginTop: "20px" }}>
-      <h1>I am Here</h1>
-
-      <h2 style={{ margin: "10px 0" }}>
-        <i className={`${icon} icon`}></i>
-        {text}
-        <i className={`${icon} icon`}></i>
-      </h2>
-      <p>Latitude: {props.lat}</p>
-      <p>Session: {season}</p>
+      <div className={`season-display ${season}`}>
+        <i className={`${icon} huge icon icon-left`}></i>
+        <h2 style={{ margin: "10px 0" }}>{text}</h2>
+        <i className={`${icon} huge icon icon-right`}></i>
     </div>
   );
 }

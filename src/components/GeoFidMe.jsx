@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Looder from "./Looder";
 import SessionDisplay from "./SessionDisplay";
 
 class GeoFindeMe extends Component {
@@ -41,12 +42,7 @@ class GeoFindeMe extends Component {
       return <SessionDisplay lat={this.state.lat} long={this.state.month} />;
     }
     return (
-      <div className="ui segment" style={{ padding: "100px 0" }}>
-        <div className="ui active inverted dimmer">
-          <div className="ui text loader">Loading</div>
-        </div>
-        <p></p>
-      </div>
+      <Looder />
     );
   }
 }
