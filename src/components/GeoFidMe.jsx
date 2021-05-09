@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Looder from "./Looder";
+import Loader from "./Looaer";
 import SessionDisplay from "./SessionDisplay";
 
 class GeoFindeMe extends Component {
@@ -41,9 +41,8 @@ class GeoFindeMe extends Component {
     if (this.state.lat && this.state.long) {
       return <SessionDisplay lat={this.state.lat} long={this.state.month} />;
     }
-    return (
-      <Looder />
-    );
+    return <Loader />;
+    // return <Loader message={"Please allow location..."} />;
   }
 }
 

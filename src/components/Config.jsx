@@ -1,6 +1,6 @@
 const Config = {
   Spring: {
-    text: "Such pretty weather",
+    text: "Such a pretty weather",
     icon: "sun",
   },
   Fall: {

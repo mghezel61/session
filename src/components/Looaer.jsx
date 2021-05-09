@@ -1,14 +1,18 @@
 import React from "react";
 
-const Looder = () => {
+const Loader = (props) => {
   return (
     <div className="ui segment" style={{ padding: "100px 0" }}>
       <div className="ui active inverted dimmer">
-        <div className="ui text loader">Loading</div>
+        <div className="ui text loader">{props.message}</div>
       </div>
       <p></p>
     </div>
   );
 };
 
-export default Looder;
+Loader.defaultProps = {
+  message : "from farmooooooo"
+}
+
+export default Loader;
